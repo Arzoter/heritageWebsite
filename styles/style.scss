@@ -1,0 +1,217 @@
+// VARIABLES
+    //Colors
+    $mainOrange: #EB5E26;
+
+    //Sizes
+    $headerNav_height: 5em;
+//
+
+
+
+// FONTS
+    @font-face {
+        font-family: "quantum";
+        src: url(../fonts/quantum.otf);
+    }
+    @font-face {
+        font-family: "watcher";
+        src: url(../fonts/watcher.ttf);
+    }
+
+    .quantumFont {
+        font-family: "quantum";
+    }
+    .watcherFont {
+        font-family: "watcher";
+    }
+//
+
+
+
+// OOCSS & Atomic classes
+    .mainBtn {
+        padding: 1em 1.75em;
+        border-radius: 15px;
+        cursor: pointer;
+
+        font-family: "quantum";
+        text-decoration: none;
+
+        &--orange {
+            @extend .mainBtn;
+        }
+        &--orange {
+            background-color: $mainOrange;
+            color: white;
+        }
+    }
+
+    .marginCenter {
+        margin-inline: auto;
+    }
+    .mTop100 {
+        margin-top: 100px;
+    }
+//
+
+
+
+* {
+    box-sizing: border-box;
+}
+main {
+    min-height: 100vh;
+
+    margin-top: $headerNav_height;
+
+    background-color: black;
+    color: white;
+
+    .homeContent:last-child {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+.headerNav {
+    width: 100%;
+
+    z-index: 3;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    // opacity: 0;
+    transition: opacity .25s;
+    background-color: black;
+    color: white;
+
+    nav {
+        align-items: center;
+        gap: 20vw;
+
+        a {
+            transition: 0.25s;
+            &:hover {
+                color: $mainOrange;
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+.headerNav_img {
+    max-height: $headerNav_height;
+
+    img {
+        max-height: inherit;
+    }
+}
+
+
+
+.introSplash {
+    height: 100vh;
+    width: 100%;
+    // margin-top: -$headerNav_height;
+
+    z-index: 1;
+    position: relative;
+
+    background-color: black;
+
+    &_wrapper {
+        align-items: center;
+
+        color: $mainOrange;
+    }
+    &_separator {
+        height: 2px;
+        width: 400px;
+        border-radius: 1px;
+
+        background-color: $mainOrange;
+    }
+    &_scrollIndicator {
+        align-items: center;
+
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: none;
+        transition: .25s;
+        cursor: pointer;
+        animation: scrollIndicOpacity 5s ease-out infinite reverse;
+
+        color: white;
+    }
+}
+@keyframes introLogoOpacity {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes introTxtOpacity {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes scrollIndicOpacity {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.bgdGradientIntro {
+    width: 100%;
+    height: 400px;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 95%); 
+}
+
+.homeContent {
+    width: 75%;
+    margin-inline: auto;
+
+    &--img {
+        img {
+            max-width: 100%;
+        }
+    }
+    &--txt {
+        h2 {
+            color: $mainOrange;
+        }
+    }
+}
