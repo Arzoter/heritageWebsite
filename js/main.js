@@ -1,4 +1,4 @@
-if ( window.location.pathname === '/' || '/heritageWebsite' ){
+if ( window.location.pathname === '/' || '/heritageWebsite/' ){
     const header = document.querySelector('.headerNav'),
         main = document.querySelector('main'),
         limit = 950;  /* scrolltop value when header should be displayed */
