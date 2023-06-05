@@ -277,11 +277,11 @@ main {
         @extend .discover_card;
     }
     &--1 {
-        background-image: url(../img/game_bgd.png);
-    }
-    &--2 {
         background-image: url(../img/hero.png);
         background-size: 50%;
+    }
+    &--2 {
+        background-image: url(../img/game_bgd.png);
     }
     &--3 {
         background-image: url(../img/enemy.png);

@@ -214,11 +214,11 @@ main .homeContent:last-child {
   font-weight: 400;
 }
 .discover_card--1 {
-  background-image: url(../img/game_bgd.png);
-}
-.discover_card--2 {
   background-image: url(../img/hero.png);
   background-size: 50%;
+}
+.discover_card--2 {
+  background-image: url(../img/game_bgd.png);
 }
 .discover_card--3 {
   background-image: url(../img/enemy.png);
