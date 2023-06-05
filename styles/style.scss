@@ -3,7 +3,7 @@
     $mainOrange: #EB5E26;
 
     //Sizes
-    $headerNav_height: 5em;
+    $headerNav_height: 5rem;
 //
 
 
@@ -58,6 +58,9 @@
 
 * {
     box-sizing: border-box;
+}
+body {
+    background-color: black;
 }
 main {
     min-height: 100vh;
@@ -136,6 +139,11 @@ main {
         border-radius: 1px;
 
         background-color: $mainOrange;
+
+        &--little {
+            @extend .introSplash_separator;
+            width: 100px;
+        }
     }
     &_scrollIndicator {
         align-items: center;
@@ -217,5 +225,66 @@ main {
         h2 {
             color: $mainOrange;
         }
+    }
+}
+
+
+
+
+
+.discover_title {
+    width: 100%;
+    padding-top: 50px;
+
+    font-size: 1.5em;
+    text-align: center;
+}
+.contentWrapper {
+    width: 90%;
+    margin-inline: auto;
+}
+.discover_card {
+    width: 100%;
+    min-height: 300px;
+
+    border-radius: 5px;
+
+    background-color: #2E3438;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:hover &_content {
+        opacity: 1;
+    }
+
+    &_content {
+        min-height: inherit;
+
+        align-items: center;
+
+        transition: .25s;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.45)
+    }
+    &_title {
+        color: $mainOrange;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    &--1, &--2, &--3 {
+        @extend .discover_card;
+    }
+    &--1 {
+        background-image: url(../img/game_bgd.png);
+    }
+    &--2 {
+        background-image: url(../img/hero.png);
+        background-size: 50%;
+    }
+    &--3 {
+        background-image: url(../img/enemy.png);
+        background-size: 50%;
     }
 }
