@@ -125,6 +125,10 @@ main {
         align-items: center;
 
         color: $mainOrange;
+
+        img {
+            max-width: 70%;
+        }
     }
     &_separator {
         height: 2px;

@@ -17,7 +17,7 @@
         <nav class="d-flex fx-nowrap fx-center quantumFont">
             <a href="discover.html">L'univers</a>
             <a href="/" class="headerNav_img">
-                <img src="img/logo--main.png" alt="Logo du jeu cliquable pour revenir à l'accueil">
+                <img src="img/logo--transp.png" alt="Logo du jeu cliquable pour revenir à l'accueil">
             </a>
             <a href="play.html">Jouer</a>
         </nav>
@@ -27,7 +27,7 @@
     <main>
         <div class="introSplash d-flex fx-center">
             <div class="introSplash_wrapper d-flex fx-col fx-center">
-                <img src="img/logo--main.png" alt="Logo du jeu" style="animation: introLogoOpacity 3s ease-out;">
+                <img src="img/logo--transp.png" alt="Logo du jeu" style="animation: introLogoOpacity 3s ease-out;">
                 <div class="introSplash_separator" style="animation: introTxtOpacity 3s ease-out;"></div>
                 <h1 class="watcherFont" style="animation: introTxtOpacity 3s ease-out;">LE DERNIER MESSAGER DE L'HUMANITÉ</h1>
             </div>
@@ -80,6 +80,28 @@
 
     <!-- Personal JS -->
     <script src="js/main.js"></script>
+    <script>
+        const header = document.querySelector('.headerNav'),
+            main = document.querySelector('main'),
+            limit = 950;  /* scrolltop value when header should be displayed */
+    
+        main.style.marginTop = 0
+        main.style.backgroundColor = "white"
+        main.style.color = "initial"
+        header.style.opacity = 0
+        window.addEventListener('scroll', (event) => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            
+            if (scrollTop >= limit) {
+                header.style.opacity = 1
+            } else {
+                header.style.opacity = 0
+            }
+        })
+        header.addEventListener('mouseover', () => {
+            header.style.opacity = 1
+        })
+    </script>
 
     <!-- Axentix JS minified version -->
     <script src="https://cdn.jsdelivr.net/npm/axentix@2.3.0/dist/axentix.min.js"></script>

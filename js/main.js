@@ -1,29 +1,3 @@
-if ( window.location.pathname === '/' || '/heritageWebsite/' ){
-    console.log("path : " + window.location.pathname);
-    const header = document.querySelector('.headerNav'),
-        main = document.querySelector('main'),
-        limit = 950;  /* scrolltop value when header should be displayed */
-    
-    main.style.marginTop = 0
-    main.style.backgroundColor = "white"
-    main.style.color = "initial"
-    header.style.opacity = 0
-    window.addEventListener('scroll', (event) => {
-        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    
-        if (scrollTop >= limit) {
-            header.style.opacity = 1
-        } else {
-            header.style.opacity = 0
-        }
-    })
-    header.addEventListener('mouseover', () => {
-        header.style.opacity = 1
-    })
-}
-
-
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

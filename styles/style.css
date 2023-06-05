@@ -88,6 +88,9 @@ main .homeContent:last-child {
   align-items: center;
   color: #EB5E26;
 }
+.introSplash_wrapper img {
+  max-width: 70%;
+}
 .introSplash_separator {
   height: 2px;
   width: 400px;
