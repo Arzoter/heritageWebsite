@@ -291,4 +291,8 @@ footer {
   background-image: url(../img/enemies.png);
 }
 
+.play_controls img {
+  width: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */
