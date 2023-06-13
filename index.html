@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Dans un monde post-apocalyptique dominé par l' IA, plongez dans une aventure immersive avec Heritage, un jeu PC gratuit alliant l'IA, le pixel art et une ambiance Post-apocalyptique. Téléchargez gratuitement ce jeu d'aventure en plateforme, explorez des paysages dystopiques et affrontez des défis uniques pour sauver l'humanité. Découvrez votre véritable identité en tant que Max, le dernier espoir de l'humanité, et parcourez des niveaux palpitants remplis de robots et de mystères. Plongez dans une histoire captivante qui met en lumière les enjeux de la déshumanisation et de la préservation de notre héritage génétique. Avec Heritage, plongez dans un univers fascinant mêlant l'IA à une expérience de jeu immersif. Téléchargez gratuitement le jeu PC et vivez une aventure unique dans ce monde post-apocalyptique. Explorez, survivez et devenez le héros qui façonnera le destin de l'humanité.">
 
     <link rel="stylesheet" href="styles/style.css">
     <!-- Axentix CSS minified version -->
@@ -47,7 +49,7 @@
                 <img src="img/jaquette.png" alt="Image de la boîte du jeu">
             </div>
             <div class="homeContent--txt d-flex fx-col fx-center">
-                <h2 class="watcherFont">plongez dans un monde POST APOCALYPTIQUE</h2>
+                    <h2 class="watcherFont">plongez dans un monde POST APOCALYPTIQUE</h2>
             
                 <p>"HERITAGE" est un jeu vidéo en 2D qui se déroule dans un monde apocalyptique contrôlé par l'intelligence artificielle.
                     Vous incarnez Max, le dernier être humain ayant conservé toute son humanité, entouré de cyborgs et de robots.
@@ -70,14 +72,85 @@
             </div>
 
             <div class="homeContent--img">
-                <img src="img/" alt="Image de gameplay du jeu">
+                <img src="img/gameFootage.png" alt="Image de gameplay du jeu">
+            </div>
+        </div>
+
+        <div class="homeContent mTop100">
+
+            <h2 class="quantumFont home_reviewsTitle">Les avis des joueurs</h2>
+
+            <div class="grix xs1 md2 gutter-xs7 mTop50">
+                <div class="card shadow-1 rounded-3 white">
+                    <div class="card-header home_cardReview_header d-flex">
+                        <div class="card_user d-flex">
+                            <div class="card_pp d-flex fx-center">
+                                <img src="img/icon_user--grey.png" alt="Image de profil de l'utilisateur">
+                            </div>
+                            
+                            <h3 class="card_username">Lumina_Swd</h3>
+                        </div>
+                        <div class="card_headerTxt d-flex fx-nowrap fx-right">
+                            <div class="card_rating grix md2">
+                                <ion-icon name="star" style="color: rgb(255, 230, 0)"></ion-icon>
+                                <span>4/5</span>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="card-content">
+                      <p>
+                        HERITAGE est un jeu 2D captivant qui mérite hautement d'être joué. L'univers apocalyptique contrôlé par l'intelligence artificielle est immersif, et l'histoire unique de Max et de sa quête pour sauver l'humanité m'a accroché dès le début. Les graphismes en 2D sont bien réalisés, créant une atmosphère sombre et fascinante. Cependant, j'aurais apprécié un peu plus de diversité dans les mécaniques de jeu pour éviter une certaine répétitivité. Malgré cela, "HERITAGE" reste une expérience mémorable, avec un scénario captivant et des personnages attachants.</p>
+                    </div>
+                  
+                    <div class="divider"></div>
+                  
+                    <div class="card-footer">From Epic Store</div>
+                </div>
+
+                <div class="card shadow-1 rounded-3 white">
+                    <div class="card-header home_cardReview_header d-flex">
+                        <div class="card_user d-flex">
+                            <div class="card_pp d-flex fx-center">
+                                <img src="img/icon_user--grey.png" alt="Image de profil de l'utilisateur">
+                            </div>
+                            
+                            <h3 class="card_username">EchoStorm</h3>
+                        </div>
+                        <div class="card_headerTxt d-flex fx-nowrap fx-right">
+                            <div class="card_rating grix md2">
+                                <ion-icon name="star" style="color: rgb(255, 230, 0)"></ion-icon>
+                                <span>2/5</span>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="card-content">
+                      <p>
+                        HERITAGE m'a laissé sur ma faim. Bien que l'univers apocalyptique contrôlé par l'intelligence artificielle soit intrigant, l'histoire manque de profondeur. Incarner Max et accomplir sa mission de sauver l'humanité était prometteur, mais le développement du personnage est insuffisant. Les graphismes en 2D sont corrects, mais sans éclat. De plus, les combats sont répétitifs et le gameplay manque de variété. HERITAGE a du potentiel, mais il aurait besoin de plus de contenu et de peaufinage pour réellement briller.
+                      </p>
+                    </div>
+                  
+                    <div class="divider"></div>
+                  
+                    <div class="card-footer">From Steam</div>
+                </div>
             </div>
         </div>
     </main>
 
 
-    <footer>
-
+    <footer class="grix xs1 md2 gutter-xs7">
+        <div class="footer_img">
+            <img src="img/logo--transp.png" alt="Logo du jeu">
+        </div>
+        <nav class="footer_links d-flex fx-col fx-center">
+            <a href="index.html">Accueil</a>
+            <a href="discover.html">L'univers</a>
+            <a href="play.html">Jouer</a>
+            <!-- <a href="reviewForm.html">Laisser un avis</a> -->
+            <a href="pdf/Mentions_légales_et_politique_de_confidentialité.pdf" target="_blank">Mentions légales</a>
+        </nav>
     </footer>
 
     <!-- Personal JS -->
@@ -103,6 +176,18 @@
         header.addEventListener('mouseover', () => {
             header.style.opacity = 1
         })
+
+
+
+        fetch('https://store.steampowered.com/appreviews/751780?json=1&key=25011829B91D025DA389A44924E5C14B')
+            .then(response => response.json())
+            .then(data => {
+                // Traitement des données récupérées
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des revues :', error);
+            });
     </script>
 
     <!-- Axentix JS minified version -->

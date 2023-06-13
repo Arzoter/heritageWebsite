@@ -8,6 +8,7 @@
 }
 .quantumFont {
   font-family: "quantum";
+  font-weight: 400;
 }
 
 .watcherFont {
@@ -32,6 +33,10 @@
 
 .mTop100 {
   margin-top: 100px;
+}
+
+.mTop50 {
+  margin-top: 50px;
 }
 
 * {
@@ -172,8 +177,71 @@ main .homeContent:last-child {
 }
 .homeContent--img img {
   max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
 }
 .homeContent--txt h2 {
+  color: #EB5E26;
+}
+
+.home_reviewsTitle {
+  color: #114b9a;
+  text-align: center;
+}
+
+.home_cardReview_header {
+  padding-bottom: 0 !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_user {
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card_pp {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(244, 244, 244);
+}
+.card_pp img {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.card_username {
+  font-size: 1.25rem;
+}
+
+footer {
+  padding: 2em 10%;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.footer_img {
+  max-width: 100%;
+}
+.footer_img img {
+  width: 100%;
+}
+
+.footer_links {
+  gap: 0.5em;
+}
+.footer_links a {
+  max-width: max-content;
+  display: inline-block;
+  transition: 0.25s;
+}
+.footer_links a:hover {
+  transform: scale(1.1);
   color: #EB5E26;
 }
 
@@ -214,15 +282,13 @@ main .homeContent:last-child {
   font-weight: 400;
 }
 .discover_card--1 {
-  background-image: url(../img/hero.png);
-  background-size: 50%;
+  background-image: url(../img/hero.jpg);
 }
 .discover_card--2 {
   background-image: url(../img/game_bgd.png);
 }
 .discover_card--3 {
-  background-image: url(../img/enemy.png);
-  background-size: 50%;
+  background-image: url(../img/enemies.png);
 }
 
 /*# sourceMappingURL=style.css.map */

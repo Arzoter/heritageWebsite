@@ -1,6 +1,7 @@
 // VARIABLES
     //Colors
     $mainOrange: #EB5E26;
+    $mainBlue: #114b9a;
 
     //Sizes
     $headerNav_height: 5rem;
@@ -20,6 +21,7 @@
 
     .quantumFont {
         font-family: "quantum";
+        font-weight: 400;
     }
     .watcherFont {
         font-family: "watcher";
@@ -51,6 +53,9 @@
     }
     .mTop100 {
         margin-top: 100px;
+    }
+    .mTop50 {
+        margin-top: 50px;
     }
 //
 
@@ -219,12 +224,77 @@ main {
     &--img {
         img {
             max-width: 100%;
+            height: 100%;
+            object-fit:
+            cover;
+            object-position: center;
+            border-radius: 5px;
         }
     }
     &--txt {
         h2 {
             color: $mainOrange;
         }
+    }
+}
+
+.home_reviewsTitle {
+    color: $mainBlue;
+    text-align: center;
+}
+.home_cardReview_header {
+    padding-bottom: 0 !important;
+
+    justify-content: space-between;
+    align-items: center;
+}
+.card_user {
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+.card_pp {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+
+    border-radius: 20px;
+    background-color: rgb(244, 244, 244);
+
+    img {
+        max-height: 20px;
+        max-width: 20px;
+    }
+}
+.card_username {
+    font-size: 1.25rem;
+}
+
+footer {
+    padding: 2em 10%;
+
+    background-color: #1b1b1b;
+    color: white;
+}
+.footer_img {
+    max-width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+.footer_links {
+    gap: .5em;
+
+    a {
+        max-width: max-content;
+        display: inline-block;
+
+        transition: .25s;
+    }
+    a:hover {
+        transform: scale(1.1);
+        color: $mainOrange;
     }
 }
 
@@ -277,14 +347,12 @@ main {
         @extend .discover_card;
     }
     &--1 {
-        background-image: url(../img/hero.png);
-        background-size: 50%;
+        background-image: url(../img/hero.jpg);
     }
     &--2 {
         background-image: url(../img/game_bgd.png);
     }
     &--3 {
-        background-image: url(../img/enemy.png);
-        background-size: 50%;
+        background-image: url(../img/enemies.png);
     }
 }
